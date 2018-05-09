@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In System</title>
+</head>
+<body>
+    <form action="/signin" method="post">
+        <input type="text" placeholder="用户名" name="username" />
+        <input type="password" placeholder="密码" name="password"/>
+        <input type="text" placeholder="验证码" name="checkCode" />
+        <img src="/imageCode" onclick="this.src = '/imageCode?' + Math.random()" />
+        <input type="submit" value="Sign In" />
+        <input type="reset" value="Reset"/>
+    </form>
+
+    <form action="/authentication/mobile" method="post">
+        <input type="text" placeholder="手机号码" name="mobile" value="15012344321"/>
+        <input type="text" placeholder="验证码" name="smsCode" />
+        <img src="/smsCode" onclick="this.src = '/smsCode?mobile=15012344321'" />
+        <input type="submit" value="Sign In" />
+        <input type="reset" value="Reset"/>
+    </form>
+
+
+</body>
+</html>
